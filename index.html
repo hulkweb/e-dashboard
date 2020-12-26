@@ -1,0 +1,260 @@
+﻿<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Dashboard</title>
+
+    <!-- BOOTSTRAP STYLES-->
+    <link href="assets/css/bootstrap.css" rel="stylesheet" />
+    <!-- FONTAWESOME STYLES-->
+    <link href="assets/css/font-awesome.css" rel="stylesheet" />
+       <!--CUSTOM BASIC STYLES-->
+    <link href="assets/css/basic.css" rel="stylesheet" />
+    <!--CUSTOM MAIN STYLES-->
+    <link href="assets/css/custom.css" rel="stylesheet" />
+    <!-- GOOGLE FONTS-->
+    <link href='http://fonts.googleapis.com/css?family=Open+Sans' rel='stylesheet' type='text/css' />
+    <script type="text/javascript" src="https://cdn.fusioncharts.com/fusioncharts/latest/fusioncharts.js"></script>
+<!-- Include fusion theme -->
+<script type="text/javascript" src="https://cdn.fusioncharts.com/fusioncharts/latest/themes/fusioncharts.theme.fusion.js"></script>
+<script type="text/javascript">
+    //STEP 2 - Chart Data
+    const chartData = [{
+        "label": "Venezuela",
+        "value": "290"
+    }, {
+        "label": "Saudi",
+        "value": "260"
+    }, {
+        "label": "Canada",
+        "value": "180"
+    }, {
+        "label": "Iran",
+        "value": "140"
+    }, {
+        "label": "Russia",
+        "value": "115"
+    }, {
+        "label": "UAE",
+        "value": "100"
+    }, {
+        "label": "US",
+        "value": "30"
+    }, {
+        "label": "China",
+        "value": "30"
+    }];
+
+    //STEP 3 - Chart Configurations
+    const chartConfig = {
+    type: 'column2d',
+    renderAt: 'chart-container',
+    width: '100%',
+    height: '400',
+    dataFormat: 'json',
+    dataSource: {
+        // Chart Configuration
+        "chart": {
+            "caption": "Total sales by countries",
+            "subCaption": "In MMbbl = One Million barrels",
+            "xAxisName": "Country",
+            "yAxisName": "Reserves (MMbbl)",
+            "numberSuffix": "K",
+            "theme": "fusion",
+            },
+        // Chart Data
+        "data": chartData
+        }
+    };
+    FusionCharts.ready(function(){
+    var fusioncharts = new FusionCharts(chartConfig);
+    fusioncharts.render();
+    });
+    </script>
+</head>
+<body style="color: transparent;">
+    <div id="wrapper">
+        <nav class="navbar navbar-default navbar-cls-top " role="navigation" style="margin-bottom: 0">
+            <div class="navbar-header">
+                <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".sidebar-collapse">
+                    <span class="sr-only">Toggle navigation</span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                </button>
+                <a class="navbar-brand" href="index.html">AVIPL</a>
+            </div>
+            <div class="header-left">
+
+            </div>
+            <div class="header-right">
+                <div class="btn-group" role="group" aria-label="">
+                            
+                    <div class="btn-group" role="group">
+                        <button id="dropdownId" type="button" class="btn btn-light dropdown-toggle bg-light " data-toggle="dropdown" aria-haspopup="true"
+                                aria-expanded="false">
+                            <div style="flex-direction: row;justify-content: space-between;display: flex;">
+                                <div  style="flex: 1;">
+                                    <img src="assets/img/user.png" alt="" style="border: 1px solid transparent;border-radius: 50%;height: 30px;width:30px;">
+                                </div>
+                                <div  style="flex: 2;color: #000;display: flex; padding-left: 0.4rem;">
+                                    <p style="margin: auto;" >Username</p>
+                                </divsername>
+                            </div>
+                        </button>
+                        <div class="dropdown-menu" aria-labelledby="dropdownId">
+                            <ul class="ul">
+                                 <li><span style="text-align: center;padding:0.3rem ;color: #000;">Welcome  !</span></li>
+                                <li class="" > <a class="dropdown-item   m-1 " href="#" style="text-align: center;padding:0.3rem ;color: #000;"> <i class="fa fa-user fa-sm"></i> Profile</a></li>
+                                <li class="" > <a class="dropdown-item   " href="#" style="text-align: center;padding:0.3rem ;color: #000;"> <i class="fa fa-sign-out fa-sm" aria-hidden="true"></i>Logout</a></li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+
+
+            </div>
+        </nav>
+        <!-- /. NAV TOP  -->
+        <nav class="navbar-default navbar-side" role="navigation">
+            <div class="sidebar-collapse">
+                <ul class="nav" id="main-menu">
+                    
+
+
+                    <li>
+                        <a class="" href="index.html"><i class="fa fa-dashboard "></i>Dashboard</a>
+                    </li>
+                    <li>
+                        <a href="order.html"><i class="fa fa-bar-chart-o "></i>Orders </a>
+                        
+                    </li>
+                     <li>
+                        <a href="#"><i class="fa fa-edit "></i>Products <span class="fa arrow"></span></a>
+                         <ul class="nav nav-second-level">
+                           
+                             <li>
+                                <a href="add_product.html">Add Products </a>
+                            </li>
+                             <li>
+                                <a href="product.html">All Products</a>
+                            </li>
+                             
+                           
+                        </ul>
+                    </li>
+                    <li>
+                        <a href="#"><i class="fa fa-edit "></i>Category <span class="fa arrow"></span></a>
+                         <ul class="nav nav-second-level">
+                           
+                             <li>
+                                <a href="add_category.html">Add Category </a>
+                            </li>
+                             <li>
+                                <a href="category.html">All Category</a>
+                            </li>
+                        </ul>
+                    </li>
+                    <li>
+                        <a href="login.html"><i class="fa fa-sign-in "></i>Login Page</a>
+                    </li>
+                </ul>
+            </div>
+
+        </nav>
+        <!-- /. NAV SIDE  -->
+        <div id="page-wrapper">
+                <div class="row">
+                    <div class="col-md-12">
+                        <h1 class="page-head-line">DASHBOARD</h1>
+                        
+                    </div>
+                </div>
+                <!-- /. ROW  -->
+                <div class="row">
+                    <div class="col-sm-3 d-flex m-auto" >
+                        <div class="main-box mb-dull">
+                            <a href="#">
+                                <h5 class="text-muted font-weight-normal mt-0">Orders</h5>
+                                                <h3 class="text-muted mt-3 mb-3">543</h3>
+                                                <p class="mb-0 text-muted">
+                                                    <span class="text-danger mr-2"><i class="fa fa-arrow-down"></i> 1.08%</span>
+                                                    <span class="text-nowrap">Since last month</span>
+                                                </p>
+                            </a>
+                        </div>
+                    </div>
+                    <div class="col-sm-3 d-flex m-auto">
+                        <div class="main-box mb-dull">
+                            <a href="#">
+                                <h5 class="text-muted font-weight-normal mt-0">Customers</h5>
+                                <h3 class="text-muted mt-3 mb-3">254</h3>
+                                <p class="mb-0 text-muted">
+                                    <span class="text-success mr-2"><i class="fa fa-arrow-up"></i> 5.27%</span>
+                                    <span class="text-nowrap">Since last month</span>  
+                                </p>
+                            </a>
+                        </div>
+                    </div>
+                    <div class="col-sm-3 d-flex m-auto">
+                        <div class="main-box mb-dull">
+                            <a href="#">
+                                <h5 class="text-muted font-weight-normal mt-0" >Revenue</h5>
+                                                <h3 class="text-muted mt-3 mb-3">Rs.6,254</h3>
+                                                <p class="mb-0 text-muted">
+                                                    <span class="text-danger mr-2"><i class="fa fa-arrow-down"></i> 7.00%</span>
+                                                    <span class="text-nowrap">Since last month</span>
+                                                </p>
+                            </a>
+                        </div>
+                    </div>
+                    <div class="col-sm-3 d-flex m-auto">
+                        <div class="main-box mb-dull">
+                            <a href="#">
+                                <h5 class="text-muted font-weight-normal mt-0" >Growth</h5>
+                                                <h3 class="text-muted mt-3 mb-3">+ 20.56%</h3>
+                                                <p class="mb-0 text-muted">
+                                                    <span class="text-success mr-2"><i class="fa fa-arrow-up"></i> 4.87%</span><br>
+                                                    <span class="text-muted">Since last month</span>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+                 <div class="row">
+                    <div class="col-lg-6 d-flex m-auto">
+                        <div class="main-box mb-dull">
+                    <div id="chartContainer" style="height: 300px; width: 100%;"></div>
+                    </div>
+                    </div>
+                    <div class="col-lg-6 d-flex m-auto">
+                        <div class="main-box mb-dull">
+                            <div class="card">
+                                <div class="card-body" style="position: relative;"> 
+                                    <h4 class="text-muted mb-3">Projections Vs Actuals</h4>
+                                    <div id="bar" style="height: auto; width: 100%;"><div id="chart-container">FusionCharts XT will load here!</div></div>
+                    </div>
+                    </div>
+                    </div>
+                    </div>
+                    </div>
+                    </div>
+                    </div>
+    
+    <!-- SCRIPTS -AT THE BOTOM TO REDUCE THE LOAD TIME-->
+    <!-- JQUERY SCRIPTS -->
+    <script src="assets/js/jquery-1.10.2.js"></script>
+    <!-- BOOTSTRAP SCRIPTS -->
+    <script src="assets/js/bootstrap.js"></script>
+    <!-- METISMENU SCRIPTS -->
+    <script src="assets/js/jquery.metisMenu.js"></script>
+       <!-- CUSTOM SCRIPTS -->
+    <script src="assets/js/custom.js"></script>
+    <script src="https://canvasjs.com/assets/script/jquery-1.11.1.min.js"></script>
+    <script src="https://canvasjs.com/assets/script/jquery.canvasjs.min.js"></script>
+    
+    
+
+
+</body>
+</html>
